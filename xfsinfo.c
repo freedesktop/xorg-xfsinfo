@@ -30,7 +30,7 @@ other dealings in this Software without prior written authorization
 from The Open Group.
 
 */
-/* $XFree86: xc/programs/xfsinfo/xfsinfo.c,v 1.4 2001/12/14 20:01:42 dawes Exp $ */
+/* $XFree86$ */
 
 /*
  * Copyright 1990 Network Computing Devices;
