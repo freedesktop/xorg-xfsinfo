@@ -27,6 +27,6 @@ xfsinfo_LDADD = $(XFSINFO_LIBS)
 xfsinfo_SOURCES =	\
         xfsinfo.c
 
-dist_man_MANS = \
+dist_man1_MANS = \
         xfsinfo.man
 
