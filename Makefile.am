@@ -21,7 +21,7 @@
 
 bin_PROGRAMS = xfsinfo
 
-xfsinfo_CFLAGS = $(XFSINFO_CFLAGS)
+AM_CFLAGS = $(XFSINFO_CFLAGS)
 xfsinfo_LDADD = $(XFSINFO_LIBS)
 
 xfsinfo_SOURCES =	\
