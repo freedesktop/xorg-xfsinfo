@@ -26,7 +26,7 @@
 .\"
 .\" $XFree86: xc/programs/xfsinfo/xfsinfo.man,v 1.4 2001/04/18 16:13:23 dawes Exp $
 .\"
-.TH XFSINFO 1 __xorgversion__
+.TH XFSINFO __appmansuffix__ __xorgversion__
 .SH NAME
 xfsinfo \- X font server information utility
 .SH SYNOPSIS
@@ -88,6 +88,6 @@ be specified in one of the formats defined in the
 .I Font Server Names
 section of X(__miscmansuffix__).
 .SH "SEE ALSO"
-xfs(1), fslsfonts(1), X(__miscmansuffix__).
+xfs(__appmansuffix__), fslsfonts(__appmansuffix__), X(__miscmansuffix__).
 .SH AUTHOR
 Dave Lemke, Network Computing Devices, Inc
