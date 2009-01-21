@@ -18,3 +18,7 @@ stamp-h1
 xfsinfo
 xfsinfo.1
 *~
+*.o
+xfsinfo-*.tar.*
+ChangeLog
+tags

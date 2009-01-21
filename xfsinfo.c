@@ -68,7 +68,7 @@ static void print_catalogue_info(FSServer *svr);
 static void print_extension_info(FSServer *svr);
 static void print_alternate_info(FSServer *svr);
 
-char       *progname;
+static char *progname;
 
 static void
 usage(void)
