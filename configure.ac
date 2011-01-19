@@ -38,4 +38,7 @@ AC_CONFIG_HEADERS([config.h])
 # Checks for pkg-config packages
 PKG_CHECK_MODULES(XFSINFO, xproto libfs)
 
-AC_OUTPUT([Makefile])
+AC_CONFIG_FILES([
+	Makefile
+	man/Makefile])
+AC_OUTPUT
