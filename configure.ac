@@ -39,7 +39,7 @@ XORG_MACROS_VERSION(1.8)
 XORG_DEFAULT_OPTIONS
 
 # Checks for pkg-config packages
-PKG_CHECK_MODULES(XFSINFO, xproto libfs)
+PKG_CHECK_MODULES(XFSINFO, [xproto >= 7.0.17 libfs])
 
 AC_CONFIG_FILES([
 	Makefile

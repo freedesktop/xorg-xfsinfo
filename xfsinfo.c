@@ -70,7 +70,7 @@ static void print_alternate_info(FSServer *svr);
 
 static char *progname;
 
-static void
+static void _X_NORETURN
 usage(void)
 {
     fprintf(stderr, "usage:  %s [-server server_name]\n", progname);
