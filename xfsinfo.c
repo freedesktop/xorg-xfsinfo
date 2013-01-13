@@ -121,6 +121,17 @@ print_server_info(FSServer *svr)
     printf("version number:	%d\n", FSProtocolVersion(svr));
     printf("vendor string:	%s\n", FSServerVendor(svr));
     printf("vendor release number:	%d\n", FSVendorRelease(svr));
+    if (strstr(FSServerVendor(svr), "X.Org")) {
+	int vendrel = FSVendorRelease(svr);
+
+	printf("X.Org xfs version: ");
+	printf("%d.%d.%d", vendrel / 10000000,
+	       (vendrel /   100000) % 100,
+	       (vendrel /     1000) % 100);
+	if (vendrel % 1000)
+	    printf(".%d", vendrel % 1000);
+	printf("\n");
+    }
     printf("maximum request size:	%ld longwords (%ld bytes)\n",
 	   FSMaxRequestSize(svr), FSMaxRequestSize(svr) * sizeof(long));
     print_catalogue_info(svr);
