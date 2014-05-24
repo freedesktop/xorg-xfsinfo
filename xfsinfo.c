@@ -56,6 +56,10 @@ from The Open Group.
  *
  */
 
+#ifdef HAVE_CONFIG_H
+# include "config.h"
+#endif
+
 #include	<stdio.h>
 #include	<stdlib.h>
 #include	<X11/Xos.h>
@@ -71,7 +75,7 @@ static char *progname;
 static void _X_NORETURN
 usage(void)
 {
-    fprintf(stderr, "usage:  %s [-server server_name]\n", progname);
+    fprintf(stderr, "usage:  %s [-server server_name] [-version]\n", progname);
     exit(-1);
 }
 
@@ -92,6 +96,9 @@ main(int argc, char *argv[])
 		usage();
 	    }
 	    servername = argv[i];
+        } else if (strcmp(argv[i], "-version") == 0) {
+            puts(PACKAGE_STRING);
+            exit(0);
 	} else {
 	    fprintf (stderr, "%s: unrecognized argument %s\n",
 		     progname, argv[i]);
