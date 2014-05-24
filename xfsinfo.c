@@ -86,10 +86,15 @@ main(int argc, char *argv[])
 
     for (i = 1; i < argc; i++) {
 	if (strncmp(argv[i], "-s", 2) == 0) {
-	    if (++i > argc)
+	    if (++i >= argc) {
+		fprintf (stderr, "%s: %s requires an argument\n",
+			 progname, argv[i-1]);
 		usage();
+	    }
 	    servername = argv[i];
 	} else {
+	    fprintf (stderr, "%s: unrecognized argument %s\n",
+		     progname, argv[i]);
 	    usage();
 	}
     }
